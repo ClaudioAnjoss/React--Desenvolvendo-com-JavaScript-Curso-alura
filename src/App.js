@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./App.css";
 import Banner from "./components/Banner";
 import Formulario from "./components/Formulario";
+import CardColaborador from "./components/CardColaborador";
 
 function App() {
   const [colaboradores, setColaboradores] = useState([]);
@@ -61,6 +62,8 @@ function App() {
           <div className="container-card" style={{background: e.corSecundaria}} key={e.nome}>
             <h2>{e.nome}</h2>
             <span style={{background: e.corPrimaria}} />
+            <CardColaborador />
+            <CardColaborador />
           </div>
         )
       })}
