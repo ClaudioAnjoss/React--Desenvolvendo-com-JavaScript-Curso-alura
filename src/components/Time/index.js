@@ -2,7 +2,7 @@ import CardColaborador from "../CardColaborador";
 import "./styled.css";
 
 const Time = ({ nome, corPrimaria, corSecundaria, colaboradores }) => {
-//   console.log(colaboradores)
+  //   console.log(colaboradores)
   return (
     <div
       className="container-card"
@@ -11,7 +11,16 @@ const Time = ({ nome, corPrimaria, corSecundaria, colaboradores }) => {
     >
       <h2>{nome}</h2>
       <span style={{ background: corPrimaria }} />
-        {colaboradores.map(data => <CardColaborador key={data.nome} nome={data.nome} cargo={data.time} imagem={data.imagem} />)}
+      <div className="container-scroll">
+        {colaboradores.map((data) => (
+          <CardColaborador
+            key={data.nome}
+            nome={data.nome}
+            cargo={data.time}
+            imagem={data.imagem}
+          />
+        ))}
+      </div>
     </div>
   );
 };

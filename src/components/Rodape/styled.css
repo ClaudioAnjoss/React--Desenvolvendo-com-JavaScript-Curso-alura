@@ -1,0 +1,34 @@
+.container-rodape {
+  height: 213px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  background: url("../../../public/imagens/fundo.png") #6278f7;
+  background-size: 100%;
+}
+
+.container-rodape .redes-sociais img {
+  width: 25px;
+  height: 25px;
+
+  margin-left: 16px;
+  cursor: pointer;
+}
+
+.container-rodape .logo {
+  width: 166px;
+  
+  cursor: pointer;
+}
+
+.container-rodape .title-rodape {
+  font-family: Montserrat;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: right;
+  color: #fff;
+}
