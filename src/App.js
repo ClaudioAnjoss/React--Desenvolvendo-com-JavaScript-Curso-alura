@@ -3,6 +3,7 @@ import "./App.css";
 import Banner from "./components/Banner";
 import Formulario from "./components/Formulario";
 import CardColaborador from "./components/CardColaborador";
+import Time from "./components/Time";
 
 function App() {
   const [colaboradores, setColaboradores] = useState([]);
@@ -14,41 +15,43 @@ function App() {
       corSecundaria: "#D9F7E9",
     },
     {
-      nome: 'Front End',
-      corPrimaria: '#82CFFA',
-      corSecundaria: '#E8F8FF'
+      nome: "Front-End",
+      corPrimaria: "#82CFFA",
+      corSecundaria: "#E8F8FF",
     },
     {
-      nome: 'Data Science',
-      corPrimaria: '#A6D157',
-      corSecundaria: '#F0F8E2'
+      nome: "Data Science",
+      corPrimaria: "#A6D157",
+      corSecundaria: "#F0F8E2",
     },
     {
-      nome: 'Devops',
-      corPrimaria: '#E06B69',
-      corSecundaria: '#FDE7E8'
+      nome: "Devops",
+      corPrimaria: "#E06B69",
+      corSecundaria: "#FDE7E8",
     },
     {
-      nome: 'UX e Design',
-      corPrimaria: '#DB6EBF',
-      corSecundaria: '#FAE9F5'
+      nome: "UX e Design",
+      corPrimaria: "#DB6EBF",
+      corSecundaria: "#FAE9F5",
     },
     {
-      nome: 'Mobile',
-      corPrimaria: '#FFBA05',
-      corSecundaria: '#FFF5D9'
+      nome: "Mobile",
+      corPrimaria: "#FFBA05",
+      corSecundaria: "#FFF5D9",
     },
     {
-      nome: 'Inovação e Gestão',
-      corSecundaria: '#FFEEDF'
-    }
+      nome: "Inovação e Gestão",
+      corPrimaria: "#FF8A29",
+      corSecundaria: "#FFEEDF",
+    },
   ];
 
-  console.log(times)
   return (
     <div className="container">
       <Banner />
-      <Formulario formData={(valor) => setColaboradores(valor)} />
+      <Formulario
+        formData={(valor) => setColaboradores([...colaboradores, valor])}
+      />
       <div className="container-organizacao">
         <h2>Minha Organização:</h2>
         <span className="borderBottom" />
@@ -57,16 +60,13 @@ function App() {
         </button>
       </div>
 
-      {times.map(e => {
-        return(
-          <div className="container-card" style={{background: e.corSecundaria}} key={e.nome}>
-            <h2>{e.nome}</h2>
-            <span style={{background: e.corPrimaria}} />
-            <CardColaborador />
-            <CardColaborador />
-          </div>
-        )
-      })}
+      {times.map(time => <Time 
+        key={time.nome}
+        nome={time.nome}
+        corPrimaria={time.corPrimaria}
+        corSecundaria={time.corSecundaria}
+        colaboradores={colaboradores.filter(colaborador => colaborador.time === time.nome)}
+      /> )}
     </div>
   );
 }

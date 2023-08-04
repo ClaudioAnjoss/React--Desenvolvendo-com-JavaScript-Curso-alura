@@ -12,13 +12,13 @@ const Formulario = (props) => {
     const [time, setTime] = useState('');
 
 
-    const listaTimes = ['','Programação', 'Front-End', 'Data Science', 'Devops', 'UX e Design', 'Mobile', 'Inovaçao e Gestão'];
+    const listaTimes = ['','Progamação', 'Front-End', 'Data Science', 'Devops', 'UX e Design', 'Mobile', 'Inovaçao e Gestão'];
 
     const salvar = (evento) => {
         evento.preventDefault();
         console.log('Submit foi feito')
         console.log(nome, cargo, imagem, time);
-        props.formData([nome, cargo, imagem, time]);
+        props.formData({nome, cargo, imagem, time});
     }
 
     return (
