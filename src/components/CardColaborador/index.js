@@ -1,14 +1,15 @@
 import './styled.css';
 
-const CardColaborador = ({nome, cargo, imagem}) => {
+const CardColaborador = ({nome, cargo, imagem, time, background}) => {
     return(
         <div className='colaborador'>
-            <div className='cabecalho'>
+            <div className='cabecalho' style={{background: background}}>
                 <img src={imagem} />
             </div>
             <div className='rodape'>
                 <h4>{nome}</h4>
-                <h5>{cargo}</h5>
+                <p>{cargo}</p>
+                <h5>{time}</h5>
             </div>
         </div>
     )

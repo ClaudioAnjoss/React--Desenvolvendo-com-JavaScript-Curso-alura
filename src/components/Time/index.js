@@ -4,7 +4,7 @@ import "./styled.css";
 const Time = ({ nome, corPrimaria, corSecundaria, colaboradores }) => {
   //   console.log(colaboradores)
   return (
-    <div
+    colaboradores.length > 0 && <div
       className="container-card"
       style={{ background: corSecundaria }}
       key={nome}
@@ -16,8 +16,10 @@ const Time = ({ nome, corPrimaria, corSecundaria, colaboradores }) => {
           <CardColaborador
             key={data.nome}
             nome={data.nome}
-            cargo={data.time}
+            cargo={data.cargo}
+            time={data.time}
             imagem={data.imagem}
+            background={corPrimaria}
           />
         ))}
       </div>

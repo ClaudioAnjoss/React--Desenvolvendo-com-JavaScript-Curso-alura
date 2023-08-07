@@ -17,6 +17,7 @@
   .container-card span {
     width: 32px;
     height: 4px;
+    margin-bottom: 16px;
   }
 
   .container-card .container-scroll {
@@ -24,6 +25,6 @@
     width: 100%;
 
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     flex-wrap: wrap;
   }

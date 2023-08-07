@@ -12,7 +12,7 @@ const Formulario = (props) => {
     const [time, setTime] = useState('');
 
 
-    const listaTimes = ['','Progamação', 'Front-End', 'Data Science', 'Devops', 'UX e Design', 'Mobile', 'Inovaçao e Gestão'];
+    const listaTimes = ['','Progamação', 'Front-End', 'Data Science', 'Devops', 'UX e Design', 'Mobile', 'Inovação e Gestão'];
 
     const salvar = (evento) => {
         evento.preventDefault();
